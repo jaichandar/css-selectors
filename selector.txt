@@ -1,0 +1,71 @@
+1. * -> overall selector
+2. div -> tag selector
+3. div.red -> specific selector
+4. span, li -> multiple selector
+5. ul li -> ul is a parent and li is child
+    example: 
+        .parent p {
+            color: red;
+        }
+        (p will be red)
+        <div class="parent">
+            <span>
+                <p>space selector</p>
+            </span>
+        </div>
+
+6. direct selector more specific
+.parent > span > p {
+    color: red;
+}
+
+7. ~ after selector
+
+<p>Testing</p>
+<p>Testing</p>
+<p class="test">Testing</p>
+<p>Testing</p>
+<p>Testing</p>
+<p>Testing</p>
+
+i can select p after .test class element like this (.test ~ p), it will select all the sibling next to the test element 
+
+8. + after selector with very first sibling
+
+<p>Testing</p>
+<p>Testing</p>
+<p class="test">Testing</p>
+( <p>Testing</p>
+<p>Testing</p>      this are getting selected for ~
+<p>Testing</p> )
+
+(.test + p) it will select very first sibling next to the test class
+
+<p>Testing</p>
+<p>Testing</p>
+<p class="test">Testing</p>
+( <p>Testing</p> ) this one got selected in +
+<p>Testing</p>
+<p>Testing</p>
+
+9. pseudo selectors like :focus, :hover, :disabled, :required, :active
+10. pseudo classes like :first-child, :last-child, :nth-child(n), :first-of-type, :last-of-type, :only-child, :not()
+
+p:not(.test) {
+    background: red;
+}
+
+(<p>Testing</p>)
+(<p>Testing</p>)
+<p class="test">Testing</p>
+(<p>Testing</p>)  it going to select other than test element
+(<p>Testing</p>)
+(<p>Testing</p>)
+
+11. pseudo elements (before and after)
+12. attribute selector 
+    <p data-jai></p>
+
+    [data-jai] {
+        background: red
+    }

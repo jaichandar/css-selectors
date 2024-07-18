@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p:not(.test) {
+            background: pink;
+        }
+        [data-attr] {
+            font-size: large;
+            font-weight: bolder;
+        }
+    </style>
+    <title>Selectors</title>
+</head>
+<body>
+    <div class="red">This is Div</div>
+    <div class="parent">
+        <span data-attr>
+            <p>space selector</p>
+        </span>
+    </div>
+    <span>This is Span</span>
+    <ul>
+        <li class="red">Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+    </ul>
+    <p>Testing</p>
+    <p>Testing</p>
+    <p class="test">Testing</p>
+    <p>Testing</p>
+    <p>Testing</p>
+    <p>Testing</p>
+</body>
+</html>
